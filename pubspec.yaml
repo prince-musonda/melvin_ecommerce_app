@@ -38,6 +38,7 @@ dependencies:
   cached_network_image: ^3.3.0
   google_fonts: ^6.1.0
   google_nav_bar: ^5.0.6
+  stroke_text: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
     - assets/shoes.jpg
     - assets/women_clothing.jpg
     - assets/men_clothing.jpg
+    - assets/logo1.jpg
+    - assets/logo2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

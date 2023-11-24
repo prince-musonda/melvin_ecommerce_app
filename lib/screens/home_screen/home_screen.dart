@@ -1,3 +1,6 @@
+import 'package:ecommerce_app/components/bottom_nav_bar.dart';
+import 'package:ecommerce_app/components/my_drawer.dart';
+import 'package:ecommerce_app/components/my_search_bar.dart';
 import "package:ecommerce_app/screens/home_screen/categories_section.dart";
 import 'package:ecommerce_app/screens/home_screen/hero_section.dart';
 import "package:flutter/material.dart";
@@ -7,25 +10,19 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
+      backgroundColor: Colors.grey[300],
+      bottomNavigationBar: const MyBottomNavBar(),
       appBar: AppBar(
-        title: Text(
-          'Visions Inc',
-          style: GoogleFonts.dancingScript(fontSize: 30),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search_rounded)),
-          const SizedBox(width: 20),
-          IconButton(
-              onPressed: () {}, icon: const Icon(Icons.shopping_cart_sharp)),
-          const SizedBox(width: 20),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.person))
-        ],
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
+      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          HeroSection(),
+          const MySearchBar(),
           const SizedBox(height: 20),
           CategoriesSection()
         ]),
